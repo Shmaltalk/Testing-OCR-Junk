@@ -1,0 +1,117 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.1stdibs</groupId>
+  <artifactId>test</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+	  	<groupId>com.google.cloud</groupId>
+	  	<artifactId>google-cloud</artifactId>
+	  	<version>0.20.1-alpha</version>
+	</dependency>
+  	<dependency>
+		<groupId>com.google.protobuf</groupId>
+		<artifactId>protobuf-java</artifactId>
+		<version>3.3.0</version>
+	</dependency>
+	
+	<dependency>
+    	<groupId>com.google.apis</groupId>
+    	<artifactId>google-api-services-vision</artifactId>
+    	<version>v1-rev358-1.22.0</version>
+	</dependency>
+	
+	<dependency>
+      <groupId>com.google.api-client</groupId>
+      <artifactId>google-api-client</artifactId>
+      <version>1.22.0</version>
+      <exclusions>
+        <exclusion> <!-- exclude an old version of Guava -->
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava-jdk5</artifactId>
+        </exclusion>
+	 </exclusions>
+	</dependency>
+	
+	<dependency>
+  		<groupId>org.apache.opennlp</groupId>
+  		<artifactId>opennlp-tools</artifactId>
+  		<version>1.8.1</version>
+	</dependency>
+	
+	<dependency>
+    	<groupId>org.apache.poi</groupId>
+    	<artifactId>poi</artifactId>
+    	<version>3.16</version>
+	</dependency>
+	
+	<dependency>
+    	<groupId>org.apache.poi</groupId>
+    	<artifactId>poi-scratchpad</artifactId>
+    	<version>3.2-FINAL</version>
+	</dependency>
+	
+	<dependency>
+    	<groupId>redis.clients</groupId>
+    	<artifactId>jedis</artifactId>
+    	<version>2.9.0</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.google.protobuf</groupId>
+		<artifactId>protobuf-java-util</artifactId>
+		<version>3.3.0</version>
+	</dependency>
+	<dependency>
+		<groupId>com.google.api.grpc</groupId>
+		<artifactId>proto-google-cloud-vision-v1</artifactId>
+		<version>0.1.12</version>
+	</dependency>
+	<dependency>
+		<groupId>com.google.cloud</groupId>
+		<artifactId>google-cloud-vision</artifactId>
+		<version>0.20.1-beta</version>
+	</dependency>
+	
+	<dependency>
+      <groupId>com.google.auth</groupId>
+      <artifactId>google-auth-library-oauth2-http</artifactId>
+      <version>0.6.1</version>
+     </dependency>
+     
+     <dependency>
+      <groupId>com.google.auth</groupId>
+      <artifactId>google-auth-library-credentials</artifactId>
+      <version>0.6.1</version>
+    </dependency>
+    
+    <dependency>
+	  <groupId>com.google.guava</groupId>
+	  <artifactId>guava</artifactId>
+	  <version>22.0</version>
+	</dependency>
+	
+	
+  </dependencies>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
